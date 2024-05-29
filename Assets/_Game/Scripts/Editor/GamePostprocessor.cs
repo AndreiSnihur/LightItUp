@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
 using UnityEditor;
 using UnityEditor.Callbacks;
+#if UNITY_IOS
 using UnityEditor.iOS.Xcode;
+#endif
 using System.IO;
 
 public class GamePostprocessor : AssetPostprocessor
