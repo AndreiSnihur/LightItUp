@@ -11,7 +11,8 @@ namespace _Game.Scripts.Game.SeekingMissile
         {
             var player = FindObjectOfType<PlayerController>();
 
-            var missile = Instantiate(missilePrefab, player.transform.position, player.transform.rotation);
+            var missilePoint = player.MissilePoint.transform;
+            var missile = Instantiate(missilePrefab, missilePoint.position, missilePoint.rotation);
         }
     }
 }
