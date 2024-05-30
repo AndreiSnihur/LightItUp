@@ -115,6 +115,14 @@ namespace LightItUp
                 time = duration
             });
         }
+        
+        public void RemoveTempTarget(Collider2D col)
+        {
+            var tempTargetToRemove = tempTargets.FirstOrDefault(t => t.target == col);
+
+            if (tempTargetToRemove != null)
+                tempTargets.Remove(tempTargetToRemove);
+        }
 
         public void Init()
         {
