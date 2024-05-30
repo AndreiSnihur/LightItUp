@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using _Game.Scripts.Game.SeekingMissile;
 using HyperCasual;
 using UnityEngine;
 using LightItUp.Data;
@@ -1287,6 +1288,7 @@ namespace LightItUp.Game
         {
             CheckForBlocks(collision.gameObject);
             CheckForPlayerDummy(collision.gameObject);
+            CheckForMissile(collision.gameObject);
         }
         protected void CheckCollisionRelease(Collision2D collision)
         {
@@ -1357,6 +1359,19 @@ namespace LightItUp.Game
                 return true;
             }
             return false;
+        }
+        
+        protected bool CheckForMissile(GameObject go)
+        {
+            if (isLit)
+                return false;
+            
+            var isMissile = go.TryGetComponent(out Missile missile);
+            if (isMissile)
+                missile.Release();
+
+            PlayerHit();
+            return isMissile;
         }
 
         #endregion
