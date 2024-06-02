@@ -9,6 +9,8 @@ namespace LightItUp.Data
 {
     public class GameManager : GameManagerBase<GameManager>
     {
+        public event Action OnCleanScene;
+        
         public bool debugDisableGates = false;
         
         public GameLevel currentLevel;
@@ -290,7 +292,7 @@ namespace LightItUp.Data
 
         public void CleanupScene()
         {
-        
+            OnCleanScene?.Invoke();
             GameData.PlayerData.wonLastGame = false;
             WinConditionChecker.Reset();
             if (currentLevel != null)
