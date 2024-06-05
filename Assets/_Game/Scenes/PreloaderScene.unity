@@ -6952,7 +6952,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 15, y: 1}
+  m_Size: {x: 16.887417, y: 1}
   m_EdgeRadius: 0
 --- !u!1001 &560819843
 PrefabInstance:
@@ -14151,7 +14151,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 8, y: 0}
+  m_Offset: {x: 8.943708, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -15328,7 +15328,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 15, y: 1}
+  m_Size: {x: 16.887417, y: 1}
   m_EdgeRadius: 0
 --- !u!1 &877802609
 GameObject:
@@ -15564,7 +15564,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -8, y: 0}
+  m_Offset: {x: -8.943708, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -19109,13 +19109,24 @@ PrefabInstance:
     - target: {fileID: 224968964128846276, guid: 0654574735289a446ae3ca1fbd3b45d2,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 342.9
+      value: 342.85
       objectReference: {fileID: 0}
     - target: {fileID: 224968964128846276, guid: 0654574735289a446ae3ca1fbd3b45d2,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 99.93
+      value: 88.79
       objectReference: {fileID: 0}
+    - target: {fileID: 392775048664462400, guid: 0654574735289a446ae3ca1fbd3b45d2,
+        type: 3}
+      propertyPath: missilePrefab
+      value: 
+      objectReference: {fileID: 1419474606102496, guid: 85b3ae16a5d37e54689ed458b0c77f24,
+        type: 3}
+    - target: {fileID: 392775048664462400, guid: 0654574735289a446ae3ca1fbd3b45d2,
+        type: 3}
+      propertyPath: missileController
+      value: 
+      objectReference: {fileID: 1865058692}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0654574735289a446ae3ca1fbd3b45d2, type: 3}
 --- !u!1 &1794838062
@@ -19409,6 +19420,53 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 866e44f4b10e94d6a90cfae52da3f32a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1865058690
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1865058691}
+  - component: {fileID: 1865058692}
+  m_Layer: 0
+  m_Name: MissileController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1865058691
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1865058690}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1865058692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1865058690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89f2d364d457161448f35f021b54ce8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  missilePrefab: {fileID: 1419474606102496, guid: 85b3ae16a5d37e54689ed458b0c77f24,
+    type: 3}
+  missileConfiguration: {fileID: 11400000, guid: fec06ad43ceacc844913b893de935ab0,
+    type: 2}
 --- !u!1001 &1884643563
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20030,10 +20088,9 @@ MonoBehaviour:
     sources from which information is collected:\tBusiness or commercial purposes
     for collection, use and sharing:\tDisclosed for business purposes to the following
     categories of third parties:\tSold to the following categories of third parties:\nPersonal
-    and online identifiers (such as unique online identifiers, IP address)\tConsumers\n\n\n
-    \n\nMarketing;\nAdvertising;\n\nAuthentication;\n\nIdentity resolution;\n\nFraud
-    detection;\n\nFulfillment services; Facilitating transactions;\n\nAuditing related
-    to our interactions with you;\n\nLegal compliance;\n\nDetecting and protecting
+    and online identifiers (such as unique online identifiers, IP address)\tConsumers\n\n\n\n\nMarketing;\nAdvertising;\n\nAuthentication;\n\nIdentity
+    resolution;\n\nFraud detection;\n\nFulfillment services; Facilitating transactions;\n\nAuditing
+    related to our interactions with you;\n\nLegal compliance;\n\nDetecting and protecting
     against security incidents, fraud, and illegal activity;\n\nDebugging;\n\nPerforming
     services (for us or our service providers) such as account servicing, processing
     orders and payments, and analytics;\n\nInternal research for technological improvement;\n\nInternal
@@ -20070,66 +20127,65 @@ MonoBehaviour:
     one-time uses\n\nAffiliates;\nService providers; and\nGovernment agencies\tAffiliates
     that are not under common branding;\nAdvertising/marketing companies;\nAdvertising
     networks;\nData analytics providers; and\nSocial networks\nInferences drawn from
-    the above information about your predicted characteristics and preferences\n\n\n
-    \n\n \n\nConsumers\n \n\nMarketing;\nAdvertising;\n\nLegal compliance;\n\nDetecting
-    and protecting against security incidents, fraud, and illegal activity;\n\nDebugging;\n\nPerforming
-    services (for us or our service provider) such as account servicing, processing
-    orders and payments, and analytics;\n\nInternal research for technological improvement;\n\nInternal
-    operations;\n\nActivities to maintain and improve our services; and\n\nOther
-    one-time uses\n\nAffiliates;\nand\nGovernment agencies\tAffiliates that are not
-    under common branding\n \n\n \n\n \n\nYour Rights Regarding Personal Information.
-    California residents have certain rights with respect to the personal information
-    collected by businesses.  If you are a California resident, you may exercise
-    the following rights regarding your personal information, subject to certain
-    exceptions and limitations:\n\n\u25AA The right to know the categories and specific
-    pieces of personal information we collect, use, disclose, and sell about you,
-    the categories of sources from which we collected your personal information,
-    our purposes for collecting or selling your personal information, the categories
-    of your personal information that we have either sold or disclosed for a business
-    purpose, and the categories of third parties with which we have shared personal
-    information.\n\n\u25AA The right to request that we delete the personal information
-    we have collected from you or maintain about you.\n\n\u25AA The right to opt
-    out of our sale(s) of your personal information. Please note that if you opt
-    out of certain types of sales, we will be unable to provide you with the services
-    that rely on such sales.\n\n\u25AA The right not to receive discriminatory treatment
-    for the exercise of the privacy rights conferred by the CCPA.\n\nTo exercise
-    any of the above rights, please contact us by email to: privacy@crazylabs.com
-    and submit the required verifying information.\n\nNote that we may need to request
-    additional information from you to verify your identity or understand the scope
-    of your request, although you will not be required to create an account with
-    us to submit a request or have it fulfilled. We will require you to provide,
-    at a minimum information verifying your identity and providing the agent with
-    written permission to make the request for you. You may designate an authorized
-    agent to make a CCPA request on your behalf by completing this form and providing
-    it to us. We do not knowingly sell the personal information of minors under 16
-    years of age.\n\n21. Deletion and Modifications of Information\nYou or, as applicable,
-    your legal guardian, may request, by sending us an email to privacy@crazylabs.com,
-    the following:\n\na. to receive access to, amend, and/or delete your Personal
-    Information and/or, as applicable, Children Persistent Device Identifier, that
-    we may hold, and/or that we cease collection or use of your Personal Information;
-    and/or\n\nb. that we request Third Parties who collected through the Apps the
-    User\u2019s Personal Information and/or, as applicable, the Children Persistent
-    Device Identifier, to do the same. We will use reasonable efforts to ensure that
-    such Third Parties do so.\n\nFor some of our Apps we may develop in-app deletion
-    request functionality which can be used by you in addition to the address above.\n\nAfter
-    you have stopped using the Apps, we will retain User\u2019s Personal Information,
-    and, as applicable, Children Persistent Device Identifier, collected through
-    the use of the App for a reasonable period, as is necessary to fulfill the purposes
-    for which it was collected, as those are specified above, including to comply
-    with our legal or business requirements, to resolve disputes, prevent fraud,
-    and/or to enforce these Terms and our agreements, all as permitted under applicable
-    privacy laws.\n\nPersonal Information that a User has shared using our Crazy
-    Labs Apps via any Social Network or third party Platform cannot be amended or
-    deleted by us, where such information is in the control of that Social Network
-    or third party Platform. We note, however, that you can modify data that a Social
-    Network or Platform shares with us, or stop our Apps interacting with that Social
-    Network or Platform by adjusting your settings with that third party provider.
-    However, should you choose to block such interaction, you may not be able to
-    enjoy all the features of our Apps. Aggregate and/or anonymous information may
-    remain on our servers indefinitely.\n\n22. Security\nSecurity of your information
-    is very important to us. We take reasonable measures to maintain the security
-    and integrity of our Apps and User information and prevent unauthorized access
-    to it or use thereof through generally accepted industry standard technologies
+    the above information about your predicted characteristics and preferences\n\n\n\n\n\n\nConsumers\n\n\nMarketing;\nAdvertising;\n\nLegal
+    compliance;\n\nDetecting and protecting against security incidents, fraud, and
+    illegal activity;\n\nDebugging;\n\nPerforming services (for us or our service
+    provider) such as account servicing, processing orders and payments, and analytics;\n\nInternal
+    research for technological improvement;\n\nInternal operations;\n\nActivities
+    to maintain and improve our services; and\n\nOther one-time uses\n\nAffiliates;\nand\nGovernment
+    agencies\tAffiliates that are not under common branding\n \n\n \n\n \n\nYour
+    Rights Regarding Personal Information. California residents have certain rights
+    with respect to the personal information collected by businesses.  If you are
+    a California resident, you may exercise the following rights regarding your personal
+    information, subject to certain exceptions and limitations:\n\n\u25AA The right
+    to know the categories and specific pieces of personal information we collect,
+    use, disclose, and sell about you, the categories of sources from which we collected
+    your personal information, our purposes for collecting or selling your personal
+    information, the categories of your personal information that we have either
+    sold or disclosed for a business purpose, and the categories of third parties
+    with which we have shared personal information.\n\n\u25AA The right to request
+    that we delete the personal information we have collected from you or maintain
+    about you.\n\n\u25AA The right to opt out of our sale(s) of your personal information.
+    Please note that if you opt out of certain types of sales, we will be unable
+    to provide you with the services that rely on such sales.\n\n\u25AA The right
+    not to receive discriminatory treatment for the exercise of the privacy rights
+    conferred by the CCPA.\n\nTo exercise any of the above rights, please contact
+    us by email to: privacy@crazylabs.com and submit the required verifying information.\n\nNote
+    that we may need to request additional information from you to verify your identity
+    or understand the scope of your request, although you will not be required to
+    create an account with us to submit a request or have it fulfilled. We will require
+    you to provide, at a minimum information verifying your identity and providing
+    the agent with written permission to make the request for you. You may designate
+    an authorized agent to make a CCPA request on your behalf by completing this
+    form and providing it to us. We do not knowingly sell the personal information
+    of minors under 16 years of age.\n\n21. Deletion and Modifications of Information\nYou
+    or, as applicable, your legal guardian, may request, by sending us an email to
+    privacy@crazylabs.com, the following:\n\na. to receive access to, amend, and/or
+    delete your Personal Information and/or, as applicable, Children Persistent Device
+    Identifier, that we may hold, and/or that we cease collection or use of your
+    Personal Information; and/or\n\nb. that we request Third Parties who collected
+    through the Apps the User\u2019s Personal Information and/or, as applicable,
+    the Children Persistent Device Identifier, to do the same. We will use reasonable
+    efforts to ensure that such Third Parties do so.\n\nFor some of our Apps we may
+    develop in-app deletion request functionality which can be used by you in addition
+    to the address above.\n\nAfter you have stopped using the Apps, we will retain
+    User\u2019s Personal Information, and, as applicable, Children Persistent Device
+    Identifier, collected through the use of the App for a reasonable period, as
+    is necessary to fulfill the purposes for which it was collected, as those are
+    specified above, including to comply with our legal or business requirements,
+    to resolve disputes, prevent fraud, and/or to enforce these Terms and our agreements,
+    all as permitted under applicable privacy laws.\n\nPersonal Information that
+    a User has shared using our Crazy Labs Apps via any Social Network or third party
+    Platform cannot be amended or deleted by us, where such information is in the
+    control of that Social Network or third party Platform. We note, however, that
+    you can modify data that a Social Network or Platform shares with us, or stop
+    our Apps interacting with that Social Network or Platform by adjusting your settings
+    with that third party provider. However, should you choose to block such interaction,
+    you may not be able to enjoy all the features of our Apps. Aggregate and/or anonymous
+    information may remain on our servers indefinitely.\n\n22. Security\nSecurity
+    of your information is very important to us. We take reasonable measures to maintain
+    the security and integrity of our Apps and User information and prevent unauthorized
+    access to it or use thereof through generally accepted industry standard technologies
     and internal procedures. Please note, however, that there are inherent risks
     in transmission of information over the Internet or other methods of electronic
     storage and we cannot guarantee that unauthorized access or use will never occur.
@@ -20780,7 +20836,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
-  m_Size: {x: 15, y: 30}
+  m_Size: {x: 16.887417, y: 30}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -22481,6 +22537,11 @@ PrefabInstance:
     - target: {fileID: 1212191407607526, guid: b50d3890808181446b8a2aa0c1ce8145, type: 3}
       propertyPath: m_Name
       value: BoosterShop
+      objectReference: {fileID: 0}
+    - target: {fileID: 224600060605717620, guid: b50d3890808181446b8a2aa0c1ce8145,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 224701460600263360, guid: b50d3890808181446b8a2aa0c1ce8145,
         type: 3}

@@ -45,6 +45,8 @@ namespace LightItUp.Game
 		public List<GameObject> visualStyleObjects12;
         public State state;
 
+        [SerializeField] private Transform missilePoint;
+        
         public enum State { 
             Normal, Fail, Win
         }
@@ -80,6 +82,8 @@ namespace LightItUp.Game
                 return new Rect((Vector2) transform.position - Vector2.one * _collider.radius, Vector2.one * _collider.radius * 2);
             }
         }
+
+        public Transform MissilePoint => missilePoint;
         
         Rigidbody2D _rigidBody;
 		CircleCollider2D _collider;
