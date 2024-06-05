@@ -17384,6 +17384,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8a0cdd60133f924bab426ea33279972, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  missileController: {fileID: 1865058692}
   debugDisableGates: 0
   currentLevel: {fileID: 0}
   isReplay: 0
