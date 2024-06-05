@@ -19109,12 +19109,12 @@ PrefabInstance:
     - target: {fileID: 224968964128846276, guid: 0654574735289a446ae3ca1fbd3b45d2,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 342.9
+      value: 342.85
       objectReference: {fileID: 0}
     - target: {fileID: 224968964128846276, guid: 0654574735289a446ae3ca1fbd3b45d2,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 99.93
+      value: 88.79
       objectReference: {fileID: 0}
     - target: {fileID: 392775048664462400, guid: 0654574735289a446ae3ca1fbd3b45d2,
         type: 3}
@@ -19465,6 +19465,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   missilePrefab: {fileID: 1419474606102496, guid: 85b3ae16a5d37e54689ed458b0c77f24,
     type: 3}
+  missileConfiguration: {fileID: 11400000, guid: fec06ad43ceacc844913b893de935ab0,
+    type: 2}
 --- !u!1001 &1884643563
 PrefabInstance:
   m_ObjectHideFlags: 0
