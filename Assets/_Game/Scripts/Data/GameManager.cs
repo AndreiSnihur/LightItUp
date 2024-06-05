@@ -1,4 +1,5 @@
 ﻿using System;
+using _Game.Scripts.Game.SeekingMissile;
 using HyperCasual;
 using UnityEngine;
 using LightItUp.Game;
@@ -9,7 +10,7 @@ namespace LightItUp.Data
 {
     public class GameManager : GameManagerBase<GameManager>
     {
-        public event Action OnCleanScene;
+        [SerializeField] private MissileController missileController;
         
         public bool debugDisableGates = false;
         
@@ -292,7 +293,7 @@ namespace LightItUp.Data
 
         public void CleanupScene()
         {
-            OnCleanScene?.Invoke();
+            missileController.DestroyMissiles();
             GameData.PlayerData.wonLastGame = false;
             WinConditionChecker.Reset();
             if (currentLevel != null)
@@ -302,7 +303,7 @@ namespace LightItUp.Data
             }
             Resources.UnloadUnusedAssets();
 			CinemachineController.Instance.Deactivate ();
-
+            
         }
         public bool IsLastBlock()
         {

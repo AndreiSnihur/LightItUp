@@ -1367,9 +1367,6 @@ namespace LightItUp.Game
                 return false;
             
             var isMissile = go.TryGetComponent(out Missile missile);
-            if (isMissile)
-                missile.Release();
-
             PlayerHit();
             return isMissile;
         }
